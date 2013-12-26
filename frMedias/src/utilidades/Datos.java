@@ -57,10 +57,13 @@ public class Datos {
 		
 		String linea = br.readLine();
 		while(linea != null) {
-			String[] campos = linea.split("-");
-			String jugador = campos[0].trim();
-			for(int i = 1 ; i < campos.length ; i++) {
-				res.put(jugador, campos[i].trim());
+			if(!linea.equals("")) {
+				String[] campos = linea.split("-");
+				String jugador = campos[0].trim();
+				String[] nombres = campos[1].split(",");
+				for(int i = 0 ; i < nombres.length ; i++) {
+					res.put(jugador, nombres[i].trim());
+				}
 			}
 			linea = br.readLine();
 		}
