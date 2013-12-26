@@ -118,6 +118,7 @@ public class Principal {
 					editorPane.setText(e1.getMessage());
 				}
 				puntuacionesJornada = Calculos.calcularMedias(jornadaSinProcesar);
+				editorPane.setText("Datos cargados correctamente");
 			}
 		});
 		
