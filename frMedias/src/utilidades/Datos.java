@@ -12,15 +12,15 @@ import com.google.common.collect.Multimap;
 
 public class Datos {
 	
-	public static Multimap<String, Double> leerJornada() throws IOException {
+	public static Multimap<String, Double> leerJornada() throws Exception {
 		return leerFichero("puntuacionesJornada.txt");
 	}
 	
-	public static Multimap<String, Double> leerTemporada() throws IOException {
+	public static Multimap<String, Double> leerTemporada() throws Exception {
 		return leerFichero("puntuacionesGlobal.dat");
 	}
 
-	private static Multimap<String, Double> leerFichero(String fichero) throws IOException {
+	private static Multimap<String, Double> leerFichero(String fichero) throws Exception {
 		Multimap<String, Double> res = ArrayListMultimap.create();
 		
 		Multimap<String, String> nombres = leerFicheroDeNombres();
@@ -69,7 +69,7 @@ public class Datos {
 		return res;
 	}
 
-	private static String convertirNombre(Multimap<String, String> nombres, String nombre) {
+	private static String convertirNombre(Multimap<String, String> nombres, String nombre) throws Exception {
 		String res = null;
 		if(nombres.containsKey(nombre)) {
 			res = nombre;
@@ -81,7 +81,7 @@ public class Datos {
 			}
 			
 			if(res == null) {
-				throw new Error("No se ha localizado a " + nombre + " en el registro de la plantilla");
+				throw new Exception("No se ha localizado a " + nombre + " en el registro de la plantilla");
 			}
 		}
 		return res;
