@@ -1,8 +1,10 @@
 package utilidades;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 
 import com.google.common.collect.ArrayListMultimap;
@@ -15,7 +17,7 @@ public class Datos {
 	}
 	
 	public static Multimap<String, Double> leerTemporada() throws IOException {
-		return leerFichero("puntuacionesGlobal.txt");
+		return leerFichero("puntuacionesGlobal.dat");
 	}
 
 	private static Multimap<String, Double> leerFichero(String fichero) throws IOException {
@@ -29,12 +31,17 @@ public class Datos {
 		
 		String linea = br.readLine();
 		while(linea != null) {
-			String[] campos = linea.split("-");
+			if(!linea.equals("")) {
+				String[] campos = linea.split("-");
+				String jugador = convertirNombre(nombres, campos[0].trim());
+				String[] puntuaciones = campos[1].split(",");
+				for(int i = 0 ; i < puntuaciones.length ; i++) {
+					Double puntuacion = Double.parseDouble(puntuaciones[i].trim());
+					res.put(jugador, puntuacion);
+				} 
+			}
 			
-			String jugador = convertirNombre(nombres, campos[0]);
-			Double puntuacion = Double.parseDouble(campos[1]);
-			
-			res.put(jugador, puntuacion);
+			linea = br.readLine();
 		}
 		
 		br.close();
@@ -51,10 +58,11 @@ public class Datos {
 		String linea = br.readLine();
 		while(linea != null) {
 			String[] campos = linea.split("-");
-			String jugador = campos[0];
+			String jugador = campos[0].trim();
 			for(int i = 1 ; i < campos.length ; i++) {
-				res.put(jugador, campos[i]);
+				res.put(jugador, campos[i].trim());
 			}
+			linea = br.readLine();
 		}
 		
 		br.close();
@@ -65,15 +73,34 @@ public class Datos {
 		String res = null;
 		if(nombres.containsKey(nombre)) {
 			res = nombre;
-		} else if(nombres.containsValue(nombre)) {
+		} else {
 			for(String j : nombres.keySet()) {
 				if(nombres.get(j).contains(nombre)) {
 					res = j;
 				}
 			}
-		} else {
-			throw new Error("No se ha localizado a " + nombre + " en el registro de la plantilla");
+			
+			if(res == null) {
+				throw new Error("No se ha localizado a " + nombre + " en el registro de la plantilla");
+			}
 		}
 		return res;
+	}
+
+	public static void guardarPuntuaciones(Multimap<String, Double> puntuacionesGlobal) throws IOException {
+		File archivo = new File ("puntuacionesGlobal.dat");
+		FileWriter fw = new FileWriter(archivo);
+		BufferedWriter bw = new BufferedWriter(fw);
+		
+		for(String jugador : puntuacionesGlobal.keySet()) {
+			String linea = jugador + " - ";
+			for(Double media : puntuacionesGlobal.get(jugador)) {
+				linea = linea + media + ",";
+			}
+			linea = linea.substring(0, linea.length()-1) + "\n";
+			bw.write(linea);
+		}
+		
+		bw.close();
 	}
 }
