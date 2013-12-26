@@ -18,6 +18,7 @@ public class Calculos {
 				acum = acum + puntuacion;
 			}
 			Double media = acum / puntuacionesJugador.size();
+			media = Math.rint(media*100)/100;
 			res.put(jugador, media);
 		}
 		

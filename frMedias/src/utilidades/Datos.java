@@ -34,9 +34,9 @@ public class Datos {
 			if(!linea.equals("")) {
 				String[] campos = linea.split("-");
 				String jugador = convertirNombre(nombres, campos[0].trim());
-				String[] puntuaciones = campos[1].split(",");
+				String[] puntuaciones = campos[1].split(";");
 				for(int i = 0 ; i < puntuaciones.length ; i++) {
-					Double puntuacion = Double.parseDouble(puntuaciones[i].trim());
+					Double puntuacion = Double.parseDouble(puntuaciones[i].trim().replace(",","."));
 					res.put(jugador, puntuacion);
 				} 
 			}
@@ -98,7 +98,7 @@ public class Datos {
 		for(String jugador : puntuacionesGlobal.keySet()) {
 			String linea = jugador + " - ";
 			for(Double media : puntuacionesGlobal.get(jugador)) {
-				linea = linea + media + ",";
+				linea = linea + media + ";";
 			}
 			linea = linea.substring(0, linea.length()-1) + "\n";
 			bw.write(linea);
