@@ -1,0 +1,20 @@
+#contenedor-pantalla {
+	-fx-border-width: 1px;
+	-fx-border-color: black;
+	-fx-background-color: rgb(239,239,241);
+	-fx-border-radius: 5px;
+}
+
+#botonCerrar {
+	-fx-background-image: url('../img/cancelar.png');
+	-fx-background-repeat: stretch;
+    -fx-background-position: center center;
+    -fx-background-size: contain;
+	-fx-border-color: rgb(239,239,241);
+	-fx-background-color: rgb(239,239,241);
+	-fx-border-radius: 5px;
+}
+
+.btMenu {
+	-fx-border-radius: 5px;
+}

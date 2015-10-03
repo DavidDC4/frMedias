@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="533.0" prefWidth="1037.0" stylesheets="@../css/estilo.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.giralsoft.gui.resultados.PartidosController">
+   <children>
+      <HBox prefHeight="533.0" prefWidth="1037.0">
+         <children>
+            <AnchorPane prefHeight="533.0" prefWidth="829.0">
+               <children>
+                  <ComboBox fx:id="comboCompeticiones" layoutX="127.0" layoutY="16.0" prefHeight="47.0" prefWidth="278.0" />
+                  <CheckBox fx:id="checkActivos" layoutX="25.0" layoutY="16.0" mnemonicParsing="false" selected="true" text="Activos" />
+                  <DatePicker fx:id="inputFechaHasta" layoutX="227.0" layoutY="76.0" prefHeight="46.0" prefWidth="177.0" promptText="Hasta" />
+                  <DatePicker fx:id="inputFechaDesde" layoutX="25.0" layoutY="75.0" prefHeight="47.0" prefWidth="177.0" promptText="Desde" />
+                  <TableView fx:id="tablaPartidos" layoutX="25.0" layoutY="129.0" prefHeight="391.0" prefWidth="760.0">
+                    <columns>
+                        <TableColumn fx:id="columnaTemporada" prefWidth="115.0" text="Temporada" />
+                      <TableColumn fx:id="columnaCompeticion" prefWidth="176.0" text="Competición" />
+                      <TableColumn fx:id="columnaJornada" prefWidth="165.0" text="Jornada" />
+                        <TableColumn fx:id="columnaRival" prefWidth="179.0" text="Rival" />
+                        <TableColumn fx:id="columnaFecha" minWidth="3.0" prefWidth="103.0" text="Fecha" />
+                    </columns>
+                  </TableView>
+                  <Button layoutX="435.0" layoutY="18.0" mnemonicParsing="false" onAction="#buscar" prefHeight="46.0" prefWidth="54.0">
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/lupa.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="533.0" prefWidth="250.0">
+               <children>
+                  <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#verPuntuacionesPartido" prefHeight="47.0" prefWidth="179.0" text="Ver puntuaciones de partido" wrapText="true">
+                     <graphic>
+                        <ImageView fitHeight="37.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/media.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="14.0" layoutY="176.0" mnemonicParsing="false" onAction="#eliminarPartido" prefHeight="47.0" prefWidth="179.0" text="Eliminar partido">
+                     <graphic>
+                        <ImageView fitHeight="37.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/cancelar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="14.0" layoutY="69.0" mnemonicParsing="false" onAction="#verMediasCompeticion" prefHeight="47.0" prefWidth="179.0" text="Ver medias de competición" wrapText="true">
+                     <graphic>
+                        <ImageView fitHeight="37.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/copa.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="14.0" layoutY="122.0" mnemonicParsing="false" onAction="#verMediasPartidos" prefHeight="47.0" prefWidth="179.0" text="Ver medias de partidos" wrapText="true">
+                     <graphic>
+                        <ImageView fitHeight="37.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/media.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="354.0" prefWidth="679.0" stylesheets="@../css/estilo.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.giralsoft.gui.puntuaciones.NombresNoEncontradosController">
+   <children>
+      <VBox prefHeight="357.0" prefWidth="679.0">
+         <children>
+            <AnchorPane prefHeight="45.0" prefWidth="679.0" styleClass="panelTitulo">
+               <children>
+                  <Label alignment="CENTER" prefHeight="45.0" prefWidth="679.0" text="Nombres no encontrados" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="240.0" prefWidth="679.0">
+               <children>
+                  <ListView fx:id="listaNombres" layoutX="14.0" layoutY="14.0" prefHeight="219.0" prefWidth="649.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="72.0" prefWidth="679.0">
+               <children>
+                  <Button layoutX="606.0" layoutY="14.0" mnemonicParsing="false" onAction="#aceptar" prefHeight="45.0" prefWidth="59.0" styleClass="botonAceptar" text="Aceptar" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

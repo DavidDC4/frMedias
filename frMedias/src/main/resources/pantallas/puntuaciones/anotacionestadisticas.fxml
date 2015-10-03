@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="642.0" prefWidth="679.0" stylesheets="@../css/estilo.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.giralsoft.gui.puntuaciones.AnotacionEstadisticasController">
+   <children>
+      <VBox prefHeight="642.0" prefWidth="679.0">
+         <children>
+            <AnchorPane prefHeight="45.0" prefWidth="679.0" styleClass="panelTitulo">
+               <children>
+                  <Label alignment="CENTER" prefHeight="45.0" prefWidth="679.0" text="Anotación de estadísticas" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="531.0" prefWidth="679.0">
+               <children>
+                  <TableView fx:id="tablaEstadisticas" editable="true" layoutX="14.0" layoutY="14.0" prefHeight="445.0" prefWidth="656.0">
+                    <columns>
+                      <TableColumn fx:id="columnaJugador" prefWidth="390.0" text="Jugador" />
+                      <TableColumn fx:id="columnaAsistencias" minWidth="0.0" prefWidth="125.0" text="Asistencias" />
+                        <TableColumn fx:id="columnaGoles" prefWidth="113.0" text="Goles" />
+                    </columns>
+                  </TableView>
+                  <ComboBox fx:id="comboJugador" layoutX="221.0" layoutY="469.0" prefHeight="45.0" prefWidth="225.0" />
+                  <TextField fx:id="inputAsistencias" layoutX="459.0" layoutY="469.0" prefHeight="45.0" prefWidth="75.0" promptText="Asistencias" />
+                  <TextField fx:id="inputGoles" layoutX="546.0" layoutY="469.0" prefHeight="45.0" prefWidth="53.0" promptText="Goles" />
+                  <Button layoutX="613.0" layoutY="469.0" mnemonicParsing="false" onAction="#addJugador" prefHeight="45.0" prefWidth="45.0">
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/nuevo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="72.0" prefWidth="679.0">
+               <children>
+                  <Button layoutX="606.0" layoutY="14.0" mnemonicParsing="false" onAction="#aceptar" prefHeight="45.0" prefWidth="59.0" styleClass="botonAceptar" text="Aceptar" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

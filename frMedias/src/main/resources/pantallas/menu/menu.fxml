@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import java.net.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox id="contenedor-pantalla" prefHeight="154.0" prefWidth="995.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.giralsoft.gui.menu.MenuController">
+   <children>
+      <HBox prefHeight="35.0" prefWidth="993.0">
+         <children>
+            <AnchorPane prefHeight="108.0" prefWidth="959.0" />
+            <Button id="botonCerrar" mnemonicParsing="false" onAction="#cerrar" prefHeight="34.0" prefWidth="36.0" />
+         </children>
+      </HBox>
+      <AnchorPane prefHeight="131.0" prefWidth="993.0">
+         <children>
+            <Button id="botonCopa" contentDisplay="TOP" layoutX="520.0" mnemonicParsing="false" onAction="#abrirCompeticiones" prefHeight="112.0" prefWidth="200.0" styleClass="btMenu" text="Mantenimiento de competiciones">
+               <stylesheets>
+                  <URL value="@../css/estilo.css" />
+                  <URL value="@../css/menu.css" />
+               </stylesheets>
+               <graphic>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/copa.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="TOP" layoutX="751.0" mnemonicParsing="false" onAction="#abrirJugadores" prefHeight="112.0" prefWidth="200.0" styleClass="btMenu" text="Mantenimiento de jugadores">
+               <graphic>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/jugador.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button id="botonCopa" contentDisplay="TOP" layoutX="37.0" mnemonicParsing="false" onAction="#abrirIntroduccionPuntuaciones" prefHeight="112.0" prefWidth="200.0" styleClass="btMenu" text="Introducción de puntuaciones" textOverrun="CLIP">
+               <graphic>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/123.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <stylesheets>
+                  <URL value="@../css/estilo.css" />
+                  <URL value="@../css/menu.css" />
+               </stylesheets>
+            </Button>
+            <Button id="botonCopa" contentDisplay="TOP" layoutX="279.0" mnemonicParsing="false" onAction="#abrirConsultaPuntuaciones" prefHeight="112.0" prefWidth="200.0" styleClass="btMenu" text="Consulta de puntuaciones" textOverrun="CLIP">
+               <graphic>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/media.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <stylesheets>
+                  <URL value="@../css/estilo.css" />
+                  <URL value="@../css/menu.css" />
+               </stylesheets>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+   <stylesheets>
+      <URL value="@../css/estilo.css" />
+      <URL value="@../css/menu.css" />
+   </stylesheets>
+</VBox>

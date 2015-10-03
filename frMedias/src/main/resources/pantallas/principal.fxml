@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox id="contenedor" stylesheets="@css/estilo.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.giralsoft.gui.MainController">
+   <children>
+      <HBox id="cabecera" spacing="5.0">
+         <children>
+            <AnchorPane id="imgEscudo" prefHeight="127.0" prefWidth="155.0" />
+            <Label id="tituloAplicacion" fx:id="titulo" prefHeight="155.0" prefWidth="664.0" text="frMedias" />
+            <AnchorPane prefHeight="155.0" prefWidth="208.0">
+               <children>
+                  <Button id="botonMenu" fx:id="botonMenu" layoutX="146.0" layoutY="14.0" mnemonicParsing="false" onAction="#abrirMenu" prefHeight="46.0" prefWidth="48.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+      <AnchorPane id="cuerpo" fx:id="cuerpo" prefHeight="533.0" prefWidth="1037.0" />
+      <HBox id="pie">
+         <children>
+            <AnchorPane prefHeight="46.0" prefWidth="17.0" />
+            <Label id="texto-pie" prefHeight="46.0" prefWidth="1007.0" text="Creado por David Aragón Pérez" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="642.0" prefWidth="679.0" stylesheets="@../css/estilo.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.giralsoft.gui.resultados.VerPuntuacionesController">
+   <children>
+      <VBox prefHeight="642.0" prefWidth="679.0">
+         <children>
+            <AnchorPane prefHeight="45.0" prefWidth="679.0" styleClass="panelTitulo">
+               <children>
+                  <Label alignment="CENTER" prefHeight="45.0" prefWidth="679.0" text="Ver puntuaciones" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="531.0" prefWidth="679.0">
+               <children>
+                  <TableView fx:id="tablaEstadisticas" editable="true" layoutX="14.0" layoutY="49.0" prefHeight="472.0" prefWidth="656.0">
+                    <columns>
+                        <TableColumn fx:id="columnaPosicion" prefWidth="120.0" text="Posición" />
+                      <TableColumn fx:id="columnaJugador" prefWidth="200.0" text="Jugador" />
+                        <TableColumn fx:id="columnaPartidos" prefWidth="108.0" text="Partidos" />
+                      <TableColumn fx:id="columnaAsistencias" minWidth="0.0" prefWidth="84.0" text="Asistencias" />
+                        <TableColumn fx:id="columnaGoles" text="Goles" />
+                        <TableColumn fx:id="columnaMedia" prefWidth="82.0" text="Media" />
+                    </columns>
+                  </TableView>
+                  <Label fx:id="labelTitulo" layoutX="23.0" layoutY="22.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="72.0" prefWidth="679.0">
+               <children>
+                  <Button layoutX="606.0" layoutY="14.0" mnemonicParsing="false" onAction="#aceptar" prefHeight="45.0" prefWidth="59.0" styleClass="botonAceptar" text="Aceptar" />
+                  <Button layoutX="484.0" layoutY="14.0" mnemonicParsing="false" onAction="#guardarImagen" prefHeight="45.0" prefWidth="104.0" text="Guardar imagen" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

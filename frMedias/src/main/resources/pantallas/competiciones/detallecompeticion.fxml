@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="287.0" prefWidth="679.0" stylesheets="@../css/estilo.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.giralsoft.gui.competiciones.DetalleCompeticionController">
+   <children>
+      <VBox prefHeight="323.0" prefWidth="679.0">
+         <children>
+            <AnchorPane prefHeight="45.0" prefWidth="679.0" styleClass="panelTitulo">
+               <children>
+                  <Label fx:id="titulo" alignment="CENTER" prefHeight="45.0" prefWidth="679.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="207.0" prefWidth="679.0">
+               <children>
+                  <TextField fx:id="inputTemporada" layoutX="127.0" layoutY="26.0" prefHeight="40.0" prefWidth="388.0" />
+                  <TextField fx:id="inputNombre" layoutX="127.0" layoutY="86.0" prefHeight="40.0" prefWidth="388.0" />
+                  <Label layoutX="48.0" layoutY="38.0" text="Temporada" />
+                  <Label layoutX="65.0" layoutY="98.0" text="Nombre" />
+                  <CheckBox fx:id="checkActivo" layoutX="127.0" layoutY="146.0" mnemonicParsing="false" selected="true" text="Activo" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="72.0" prefWidth="679.0">
+               <children>
+                  <Button layoutX="514.0" layoutY="14.0" mnemonicParsing="false" onAction="#aceptar" prefHeight="45.0" prefWidth="59.0" styleClass="botonAceptar" text="Aceptar" />
+                  <Button layoutX="593.0" layoutY="14.0" mnemonicParsing="false" onAction="#cancelar" prefHeight="45.0" prefWidth="64.0" styleClass="botonCancelar" text="Cancelar" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

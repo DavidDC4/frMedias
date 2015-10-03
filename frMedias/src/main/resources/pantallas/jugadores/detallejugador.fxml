@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="354.0" prefWidth="679.0" stylesheets="@../css/estilo.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.giralsoft.gui.jugadores.DetalleJugadorController">
+   <children>
+      <VBox prefHeight="408.0" prefWidth="679.0">
+         <children>
+            <AnchorPane prefHeight="45.0" prefWidth="679.0" styleClass="panelTitulo">
+               <children>
+                  <Label fx:id="titulo" alignment="CENTER" prefHeight="45.0" prefWidth="679.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="291.0" prefWidth="679.0">
+               <children>
+                  <TabPane layoutX="-1.0" prefHeight="291.0" prefWidth="679.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="Datos del jugador">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="253.0" prefWidth="679.0">
+                                 <children>
+                                    <Label layoutX="31.0" layoutY="31.0" text="Nombre" />
+                                    <Label layoutX="36.0" layoutY="90.0" text="Dorsal" />
+                                    <TextField fx:id="inputNombre" layoutX="98.0" layoutY="17.0" prefHeight="45.0" prefWidth="503.0" />
+                                    <TextField fx:id="inputDorsal" layoutX="98.0" layoutY="76.0" prefHeight="45.0" prefWidth="79.0" />
+                                    <ComboBox fx:id="comboPosiciones" layoutX="98.0" layoutY="136.0" prefHeight="45.0" prefWidth="150.0" />
+                                    <Label layoutX="31.0" layoutY="150.0" text="Posición" />
+                                    <CheckBox fx:id="checkActivo" layoutX="98.0" layoutY="205.0" mnemonicParsing="false" selected="true" text="Activo" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="Sinonimos">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ListView fx:id="listaSinonimos" layoutX="14.0" layoutY="6.0" prefHeight="191.0" prefWidth="653.0" />
+                                    <TextField fx:id="inputSinonimo" layoutX="14.0" layoutY="203.0" prefHeight="45.0" prefWidth="590.0" />
+                                    <Button layoutX="613.0" layoutY="203.0" mnemonicParsing="false" onAction="#addSinonimo" prefHeight="45.0" prefWidth="54.0">
+                                       <graphic>
+                                          <ImageView fitHeight="34.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/nuevo.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="72.0" prefWidth="679.0">
+               <children>
+                  <Button layoutX="514.0" layoutY="14.0" mnemonicParsing="false" onAction="#aceptar" prefHeight="45.0" prefWidth="59.0" styleClass="botonAceptar" text="Aceptar" />
+                  <Button layoutX="593.0" layoutY="14.0" mnemonicParsing="false" onAction="#cancelar" prefHeight="45.0" prefWidth="64.0" styleClass="botonCancelar" text="Cancelar" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

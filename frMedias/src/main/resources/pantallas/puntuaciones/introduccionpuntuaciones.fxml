@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="533.0" prefWidth="1037.0" stylesheets="@../css/estilo.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.giralsoft.gui.puntuaciones.IntroduccionPuntuacionesController">
+   <children>
+      <HBox prefHeight="533.0" prefWidth="1037.0">
+         <children>
+            <AnchorPane prefHeight="533.0" prefWidth="829.0">
+               <children>
+                  <ComboBox fx:id="comboCompeticiones" layoutX="14.0" layoutY="14.0" prefHeight="47.0" prefWidth="343.0" />
+                  <TextField fx:id="inputJornada" layoutX="373.0" layoutY="14.0" prefHeight="47.0" prefWidth="312.0" promptText="Jornada" />
+                  <TextField fx:id="inputRival" layoutX="14.0" layoutY="67.0" prefHeight="47.0" prefWidth="343.0" promptText="Rival" />
+                  <DatePicker fx:id="inputFecha" layoutX="373.0" layoutY="67.0" prefHeight="47.0" prefWidth="198.0" promptText="Fecha" />
+                  <CheckBox fx:id="checkLocal" layoutX="603.0" layoutY="67.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="94.0" text="Local" />
+                  <TextArea fx:id="inputPuntuaciones" layoutX="14.0" layoutY="123.0" prefHeight="402.0" prefWidth="784.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="533.0" prefWidth="250.0">
+               <children>
+                  <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#procesarPuntuaciones" text="Procesar puntuaciones">
+                     <graphic>
+                        <ImageView fitHeight="37.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/ok.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="14.0" layoutY="70.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="179.0" text="Ver última jornada">
+                     <graphic>
+                        <ImageView fitHeight="37.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/calendario.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

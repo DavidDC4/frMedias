@@ -1,0 +1,157 @@
+.button {
+	-fx-background-color: white;
+	-fx-border-color: black;
+	-fx-background-insets: 0.0;
+}
+
+.button:pressed {
+	-fx-background-color: rgb(230.0,230.0,230.0);
+}
+
+.table-view {
+    -fx-base: white;
+    -fx-control-inner-background: white;
+    -fx-background-color: white;
+    -fx-padding: 5.0;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: rgb(230.0,230.0,230.0);
+}
+
+.table-view .column-header .label {
+    -fx-font-size: 15.0px;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: black;
+    -fx-alignment: center;
+    -fx-opacity: 1.0;
+}
+
+.table-view .table-cell {
+    -fx-alignment: center;
+    -fx-padding: 2.0px;
+}
+
+#contenedor {
+	-fx-background-color: white;
+}
+
+#cabecera {
+	-fx-border-color: black;
+	-fx-border-width: 0.0 0.0 4.0px 0.0;
+}
+
+#botonMenu {
+	-fx-background-image: url('../img/menu.png');
+	-fx-background-repeat: stretch;
+    -fx-background-position: center center;
+    -fx-background-size: contain;
+}
+
+#imgEscudo {
+	-fx-background-image: url('../img/escudo.jpeg');
+	-fx-background-repeat: stretch;
+    -fx-background-position: center center;
+    -fx-background-size: contain;
+}
+
+#tituloAplicacion {
+	-fx-font-family: Homenaje;
+	-fx-font-size: 100.0px; 
+}
+
+#pie {
+	-fx-border-color: black;
+	-fx-border-width: 4.0px 0.0 0.0 0.0;
+}
+
+#texto-pie {
+	-fx-font-family: Homenaje;
+	-fx-font-size: 20.0px; 
+}
+
+.botonBuscar {
+	-fx-background-image: url('../img/lupa.png');
+	-fx-background-repeat: stretch;
+    -fx-background-position: center center;
+    -fx-background-size: contain;
+}
+
+.panelTitulo {
+	-fx-background-color: rgb(0.0,128.0,192.0);
+}
+
+.panelTitulo .label {
+    -fx-font-size: 25.0px;
+    -fx-font-weight: 'bold';
+}
+
+.combo-box {
+	-fx-background-color: white;
+	-fx-border-color: black;
+}
+
+.text-field {
+	-fx-background-color: white;
+	-fx-border-color: black;
+}
+
+.botonAceptar {
+	-fx-background-color: rgb(0.0,128.0,0.0);
+	-fx-text-fill: white;
+}
+
+.botonCancelar {
+	-fx-background-color: rgb(243.0,71.0,71.0);
+	-fx-text-fill: white;
+}
+
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-opacity: 0.0;
+}
+
+.tab-pane {
+    -fx-tab-min-width: 100px;
+}
+
+.tab {
+    -fx-background-insets: 0.0 1.0 0.0 1.0,0.0,0.0;
+}
+.tab-pane .tab {
+    -fx-background-color: #e6e6e6;
+
+}
+
+.tab-pane .tab:selected {
+    -fx-background-color: #3c3c3c;
+}
+
+.tab .tab-label { 
+    -fx-alignment: CENTER;
+    -fx-text-fill: rgb(0.0,128.0,192.0);
+    -fx-font-size: 12.0px;
+    -fx-font-weight: bold;
+}
+
+.tab:selected .tab-label { 
+    -fx-alignment: CENTER;
+    -fx-text-fill: white;
+}
+
+.date-picker > .arrow-button {
+	-fx-background-color: white;
+	-fx-border-color: black;
+	-fx-border-width: 1 1 1 0;
+	-fx-background-insets: 0.0;
+}
+
+.check-box > .box {
+	-fx-background-color: white;
+	-fx-border-color: black;
+	-fx-background-insets: 0.0;
+    -fx-padding: 1em;
+}
+
+.check-box > .box > .mark {
+    -fx-padding: 0.8em;
+}

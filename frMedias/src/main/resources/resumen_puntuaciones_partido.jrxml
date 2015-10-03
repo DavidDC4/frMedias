@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="resumen_puntuaciones" pageWidth="500" pageHeight="450" columnWidth="500" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="6a1e75b3-7e71-4519-bbf7-aa6881093be2">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="NOMBRE" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DORSAL" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="POSICION" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ASISTENCIAS" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="GOLES" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NOTA" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="Posicion">
+		<groupExpression><![CDATA[$F{POSICION}]]></groupExpression>
+		<groupHeader>
+			<band/>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<title>
+		<band height="76" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="ebdda09e-7483-4c48-9226-97af307fc7a8" x="0" y="0" width="500" height="76" backcolor="#000000"/>
+			</rectangle>
+			<image>
+				<reportElement uuid="51d1c4e8-dc17-4c41-9008-75eee1a39cc5" x="0" y="0" width="244" height="76"/>
+				<imageExpression><![CDATA["C:\\Users\\David\\Proyectos\\Foro RealMadrid\\frMedias\\src\\main\\resources\\logo.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="461b167a-2d03-4348-83e7-8a2f16e88315" mode="Opaque" x="321" y="7" width="175" height="36" forecolor="#0070C0" backcolor="#000000"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Black" size="22" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Puntuaciones]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="28" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="65a9dc40-f19e-4b8e-923e-e7eab14d6a18" x="0" y="0" width="500" height="28" backcolor="#000000"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="230efef3-363e-4af8-9193-4cd7272c93b4" mode="Opaque" x="0" y="0" width="34" height="28" forecolor="#FFFFFF" backcolor="#000000"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="19" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Nº]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b22bf217-64c2-4086-972b-c0e573d5e4eb" mode="Opaque" x="34" y="0" width="255" height="28" forecolor="#FFFFFF" backcolor="#000000"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="19" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="77e3b1f3-8f8b-4a17-aec2-ef58400e4fec" mode="Opaque" x="289" y="0" width="99" height="28" forecolor="#FFFFFF" backcolor="#000000"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="19" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Asistencias]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c72d99e3-1be1-455c-a701-fe9c5b121080" mode="Opaque" x="388" y="0" width="62" height="28" forecolor="#FFFFFF" backcolor="#000000"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="19" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Goles]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="43a3c02e-9f9e-48ab-9631-68f25cb63116" mode="Opaque" x="450" y="0" width="50" height="28" forecolor="#FFFFFF" backcolor="#000000"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="19" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Nota]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="d71f9f97-6cb5-41f2-b190-7e6f7e68bf8c" x="0" y="0" width="500" height="23" forecolor="#B1A0C7" backcolor="#B1A0C7">
+					<printWhenExpression><![CDATA[$F{POSICION} % 2 == 0]]></printWhenExpression>
+				</reportElement>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="25a7ddcc-291a-4f64-817f-c3590700e1b3" x="0" y="0" width="500" height="23" isPrintWhenDetailOverflows="true" forecolor="#CCC0DA" backcolor="#CCC0DA">
+					<printWhenExpression><![CDATA[$F{POSICION} % 2 == 1]]></printWhenExpression>
+				</reportElement>
+			</rectangle>
+			<textField>
+				<reportElement uuid="9292ed32-e609-4205-9b33-e11aa6f0d08e" x="34" y="0" width="255" height="23"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="15"/>
+					<paragraph leftIndent="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NOMBRE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="9f5ad44a-2f9a-43bb-9588-c6a7d1af7ca6" x="289" y="0" width="99" height="23">
+					<printWhenExpression><![CDATA[$F{DORSAL} > 0]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ASISTENCIAS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="1fe81e4c-eb75-45f0-8db8-11c0eb5084c5" x="388" y="0" width="62" height="23">
+					<printWhenExpression><![CDATA[$F{DORSAL} > 0]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{GOLES}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="83b04b9f-d88d-4763-9a2a-d66ef06960b7" x="450" y="0" width="50" height="23">
+					<printWhenExpression><![CDATA[$F{NOTA} >= 0]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="15"/>
+					<paragraph leftIndent="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NOTA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="2459eb29-6e8e-40f0-8412-df9857a7ff28" x="0" y="0" width="34" height="23">
+					<printWhenExpression><![CDATA[$F{DORSAL} > 0]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DORSAL}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="b40ce94a-bc1b-49d9-acbb-44319ba5d4a6" x="450" y="0" width="50" height="23" isPrintWhenDetailOverflows="true">
+					<printWhenExpression><![CDATA[$F{NOTA} == -1]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="15"/>
+					<paragraph leftIndent="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["-"]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
