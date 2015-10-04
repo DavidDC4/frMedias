@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="533.0" prefWidth="1037.0" stylesheets="@../css/estilo.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.giralsoft.gui.jugadores.JugadoresController">
+<AnchorPane prefHeight="533.0" prefWidth="1037.0" stylesheets="@../../css/estilo.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.giralsoft.gui.jugadores.JugadoresController">
    <children>
       <VBox prefHeight="533.0" prefWidth="1037.0">
          <children>
@@ -26,7 +26,7 @@
                      <graphic>
                         <ImageView fitHeight="30.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../img/cancelar.png" />
+                              <Image url="@../../img/cancelar.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -35,7 +35,7 @@
                      <graphic>
                         <ImageView fitHeight="30.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../img/nuevo.png" />
+                              <Image url="@../../img/nuevo.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -44,7 +44,7 @@
                      <graphic>
                         <ImageView fitHeight="30.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../img/editar.png" />
+                              <Image url="@../../img/editar.png" />
                            </image>
                         </ImageView>
                      </graphic>

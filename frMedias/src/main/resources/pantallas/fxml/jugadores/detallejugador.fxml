@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="354.0" prefWidth="679.0" stylesheets="@../css/estilo.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.giralsoft.gui.jugadores.DetalleJugadorController">
+<AnchorPane prefHeight="354.0" prefWidth="679.0" stylesheets="@../../css/estilo.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.giralsoft.gui.jugadores.DetalleJugadorController">
    <children>
       <VBox prefHeight="408.0" prefWidth="679.0">
          <children>
@@ -47,7 +47,7 @@
                                        <graphic>
                                           <ImageView fitHeight="34.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
-                                                <Image url="@../img/nuevo.png" />
+                                                <Image url="@../../img/nuevo.png" />
                                              </image>
                                           </ImageView>
                                        </graphic>

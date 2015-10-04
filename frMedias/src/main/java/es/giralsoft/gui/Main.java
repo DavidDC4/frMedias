@@ -73,7 +73,7 @@ public class Main extends Application {
 
 		try {
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(getClass().getResource("/pantallas/principal.fxml"));
+			loader.setLocation(getClass().getResource(Pantallas.PRINCIPAL));
 			loader.setControllerFactory(new Callback<Class<?>, Object>() {
 				@Override
 				public Object call(Class<?> defaultControllerClass) {

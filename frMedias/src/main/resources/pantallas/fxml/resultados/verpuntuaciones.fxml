@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="642.0" prefWidth="679.0" stylesheets="@../css/estilo.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.giralsoft.gui.resultados.VerPuntuacionesController">
+<AnchorPane prefHeight="642.0" prefWidth="679.0" stylesheets="@../../css/estilo.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.giralsoft.gui.resultados.VerPuntuacionesController">
    <children>
       <VBox prefHeight="642.0" prefWidth="679.0">
          <children>

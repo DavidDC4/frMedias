@@ -9,18 +9,18 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="354.0" prefWidth="679.0" stylesheets="@../css/estilo.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.giralsoft.gui.puntuaciones.LineasErroneasController">
+<AnchorPane prefHeight="354.0" prefWidth="679.0" stylesheets="@../../css/estilo.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.giralsoft.gui.puntuaciones.NombresNoEncontradosController">
    <children>
       <VBox prefHeight="357.0" prefWidth="679.0">
          <children>
             <AnchorPane prefHeight="45.0" prefWidth="679.0" styleClass="panelTitulo">
                <children>
-                  <Label alignment="CENTER" prefHeight="45.0" prefWidth="679.0" text="Líneas erróneas" />
+                  <Label alignment="CENTER" prefHeight="45.0" prefWidth="679.0" text="Nombres no encontrados" />
                </children>
             </AnchorPane>
             <AnchorPane prefHeight="240.0" prefWidth="679.0">
                <children>
-                  <TextArea fx:id="inputLineas" layoutX="14.0" layoutY="14.0" prefHeight="217.0" prefWidth="652.0" />
+                  <ListView fx:id="listaNombres" layoutX="14.0" layoutY="14.0" prefHeight="219.0" prefWidth="649.0" />
                </children>
             </AnchorPane>
             <AnchorPane prefHeight="72.0" prefWidth="679.0">

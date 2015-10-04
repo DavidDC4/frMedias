@@ -20,13 +20,13 @@
          <children>
             <Button id="botonCopa" contentDisplay="TOP" layoutX="520.0" mnemonicParsing="false" onAction="#abrirCompeticiones" prefHeight="112.0" prefWidth="200.0" styleClass="btMenu" text="Mantenimiento de competiciones">
                <stylesheets>
-                  <URL value="@../css/estilo.css" />
-                  <URL value="@../css/menu.css" />
+                  <URL value="@../../css/estilo.css" />
+                  <URL value="@../../css/menu.css" />
                </stylesheets>
                <graphic>
                   <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../img/copa.png" />
+                        <Image url="@../../img/copa.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -35,7 +35,7 @@
                <graphic>
                   <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../img/jugador.png" />
+                        <Image url="@../../img/jugador.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -44,12 +44,12 @@
                <graphic>
                   <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../img/123.png" />
+                        <Image url="@../../img/123.png" />
                      </image>
                   </ImageView>
                </graphic>
                <stylesheets>
-                  <URL value="@../css/estilo.css" />
+                  <URL value="@../../css/estilo.css" />
                   <URL value="@../css/menu.css" />
                </stylesheets>
             </Button>
@@ -57,20 +57,20 @@
                <graphic>
                   <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../img/media.png" />
+                        <Image url="@../../img/media.png" />
                      </image>
                   </ImageView>
                </graphic>
                <stylesheets>
-                  <URL value="@../css/estilo.css" />
-                  <URL value="@../css/menu.css" />
+                  <URL value="@../../css/estilo.css" />
+                  <URL value="@../../css/menu.css" />
                </stylesheets>
             </Button>
          </children>
       </AnchorPane>
    </children>
    <stylesheets>
-      <URL value="@../css/estilo.css" />
-      <URL value="@../css/menu.css" />
+      <URL value="@../../css/estilo.css" />
+      <URL value="@../../css/menu.css" />
    </stylesheets>
 </VBox>

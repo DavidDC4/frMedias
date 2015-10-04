@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="533.0" prefWidth="1037.0" stylesheets="@../css/estilo.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.giralsoft.gui.resultados.PartidosController">
+<AnchorPane prefHeight="533.0" prefWidth="1037.0" stylesheets="@../../css/estilo.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.giralsoft.gui.resultados.PartidosController">
    <children>
       <HBox prefHeight="533.0" prefWidth="1037.0">
          <children>
@@ -31,7 +31,7 @@
                      <graphic>
                         <ImageView fitHeight="35.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../img/lupa.png" />
+                              <Image url="@../../img/lupa.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -44,7 +44,7 @@
                      <graphic>
                         <ImageView fitHeight="37.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../img/media.png" />
+                              <Image url="@../../img/media.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -53,7 +53,7 @@
                      <graphic>
                         <ImageView fitHeight="37.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../img/cancelar.png" />
+                              <Image url="@../../img/cancelar.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -62,7 +62,7 @@
                      <graphic>
                         <ImageView fitHeight="37.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../img/copa.png" />
+                              <Image url="@../../img/copa.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -71,7 +71,7 @@
                      <graphic>
                         <ImageView fitHeight="37.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../img/media.png" />
+                              <Image url="@../../img/media.png" />
                            </image>
                         </ImageView>
                      </graphic>

@@ -29,10 +29,10 @@ public interface ParticipacionRepository extends CrudRepository<Participacion, L
 	@Query("SELECT p FROM Participacion p WHERE p.partido = ?1")
 	List<Participacion> buscarParticipaciones(Partido partido);
 	
-	@Query("SELECT COUNT(p), SUM(p.goles), SUM(p.asistencias), AVG(p.nota), p.jugador FROM Competicion c JOIN c.partidos pa JOIN pa.participaciones p WHERE c = ?1 GROUP BY p.jugador")
+	@Query("SELECT COUNT(p), SUM(p.goles), SUM(p.asistencias), AVG(CASE WHEN p.nota >= 0 THEN p.nota ELSE null END), p.jugador FROM Competicion c JOIN c.partidos pa JOIN pa.participaciones p WHERE c = ?1 GROUP BY p.jugador")
 	List<Object[]> buscarParticipaciones(Competicion competicion);
 	
-	@Query("SELECT COUNT(p), SUM(p.goles), SUM(p.asistencias), AVG(p.nota), p.jugador FROM Competicion c JOIN c.partidos pa JOIN pa.participaciones p WHERE pa IN ?1 GROUP BY p.jugador")
+	@Query("SELECT COUNT(p), SUM(p.goles), SUM(p.asistencias), AVG(CASE WHEN p.nota >= 0 THEN p.nota ELSE null END), p.jugador FROM Competicion c JOIN c.partidos pa JOIN pa.participaciones p WHERE pa IN ?1 GROUP BY p.jugador")
 	List<Object[]> buscarParticipaciones(List<Partido> partidos);
 
 }
