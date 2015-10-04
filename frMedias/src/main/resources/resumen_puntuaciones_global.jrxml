@@ -51,14 +51,14 @@
 				<text><![CDATA[Nombre]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="77e3b1f3-8f8b-4a17-aec2-ef58400e4fec" mode="Opaque" x="321" y="0" width="90" height="28" forecolor="#FFFFFF" backcolor="#000000"/>
+				<reportElement uuid="77e3b1f3-8f8b-4a17-aec2-ef58400e4fec" mode="Opaque" x="383" y="0" width="90" height="28" forecolor="#FFFFFF" backcolor="#000000"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Calibri" size="19" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Asistencias]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="c72d99e3-1be1-455c-a701-fe9c5b121080" mode="Opaque" x="411" y="0" width="62" height="28" forecolor="#FFFFFF" backcolor="#000000"/>
+				<reportElement uuid="c72d99e3-1be1-455c-a701-fe9c5b121080" mode="Opaque" x="321" y="0" width="62" height="28" forecolor="#FFFFFF" backcolor="#000000"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Calibri" size="19" isBold="false"/>
 				</textElement>
@@ -101,7 +101,7 @@
 				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement uuid="9f5ad44a-2f9a-43bb-9588-c6a7d1af7ca6" x="321" y="0" width="90" height="23">
+				<reportElement uuid="9f5ad44a-2f9a-43bb-9588-c6a7d1af7ca6" x="383" y="0" width="90" height="23">
 					<printWhenExpression><![CDATA[$F{dorsal} > 0]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
@@ -110,7 +110,7 @@
 				<textFieldExpression><![CDATA[$F{asistencias}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement uuid="1fe81e4c-eb75-45f0-8db8-11c0eb5084c5" x="411" y="0" width="62" height="23">
+				<reportElement uuid="1fe81e4c-eb75-45f0-8db8-11c0eb5084c5" x="321" y="0" width="62" height="23">
 					<printWhenExpression><![CDATA[$F{dorsal} > 0]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">

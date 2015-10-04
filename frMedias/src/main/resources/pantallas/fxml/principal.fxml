@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.text.*?>
 <?import java.net.*?>
 <?import javafx.scene.control.*?>
@@ -25,6 +26,14 @@
          <children>
             <AnchorPane prefHeight="46.0" prefWidth="17.0" />
             <Label id="texto-pie" prefHeight="46.0" prefWidth="1007.0" text="Creado por David Aragón Pérez" />
+            <ProgressIndicator fx:id="indicadorProgreso" prefHeight="19.0" prefWidth="28.0" visible="false">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+            </ProgressIndicator>
          </children>
       </HBox>
    </children>

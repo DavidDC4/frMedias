@@ -13,6 +13,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ProgressIndicator;
 import javafx.scene.effect.GaussianBlur;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
@@ -28,6 +29,9 @@ public class MainController implements Initializable {
 	
 	@FXML
 	private Button botonMenu;
+	
+	@FXML
+	private ProgressIndicator indicadorProgreso;
 	
 	private Stage stageModal;
 
@@ -93,6 +97,14 @@ public class MainController implements Initializable {
 	
 	public void abrirMenu() {
 		cargarModal(Pantallas.MENU);
+	}
+	
+	public void mostrarIndicador() {
+		indicadorProgreso.setVisible(true);
+	}
+	
+	public void ocultarIndicador() {
+		indicadorProgreso.setVisible(false);
 	}
 
 	@Override

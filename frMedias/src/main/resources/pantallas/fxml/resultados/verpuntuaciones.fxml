@@ -25,8 +25,8 @@
                         <TableColumn fx:id="columnaPosicion" prefWidth="120.0" text="Posición" />
                       <TableColumn fx:id="columnaJugador" prefWidth="200.0" text="Jugador" />
                         <TableColumn fx:id="columnaPartidos" prefWidth="108.0" text="Partidos" />
-                      <TableColumn fx:id="columnaAsistencias" minWidth="0.0" prefWidth="84.0" text="Asistencias" />
                         <TableColumn fx:id="columnaGoles" text="Goles" />
+                      <TableColumn fx:id="columnaAsistencias" minWidth="0.0" prefWidth="84.0" text="Asistencias" />
                         <TableColumn fx:id="columnaMedia" prefWidth="82.0" text="Media" />
                     </columns>
                   </TableView>

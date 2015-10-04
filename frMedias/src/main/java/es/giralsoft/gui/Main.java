@@ -51,6 +51,7 @@ public class Main extends Application {
 			}
 			
 			BaseDatosConfig.cargarConfiguracion(properties);
+			BaseDatosConfig.arrancarTrabajoBackup();
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
