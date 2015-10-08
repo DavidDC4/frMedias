@@ -1,21 +1,25 @@
 package es.giralsoft.gui;
 
-import java.io.FileNotFoundException;
+import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.Properties;
 
+import org.quartz.SchedulerException;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 
+import es.giralsoft.util.Alertas;
 import es.giralsoft.util.BaseDatosConfig;
 import javafx.application.Application;
+import javafx.application.Platform;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 import javafx.util.Callback;
 
 @ComponentScan(basePackages = "es.giralsoft", lazyInit = true)
@@ -37,26 +41,21 @@ public class Main extends Application {
 	}
 
 	private void cargarConfiguracion() {
-		InputStream inputStream = null;
+		FileInputStream fis = null;
 		try {
 			Properties properties = new Properties();
-			String propFileName = "config.properties";
+			String propFileName = "./config.properties";
+			fis = new FileInputStream(propFileName);
 
-			inputStream = getClass().getClassLoader().getResourceAsStream(propFileName);
+			properties.load(fis);
 
-			if (inputStream != null) {
-				properties.load(inputStream);
-			} else {
-				throw new FileNotFoundException("No se ha encontrado el fichero " + propFileName);
-			}
-			
 			BaseDatosConfig.cargarConfiguracion(properties);
 			BaseDatosConfig.arrancarTrabajoBackup();
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
 			try {
-				inputStream.close();
+				fis.close();
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
@@ -71,6 +70,18 @@ public class Main extends Application {
 		main = this;
 		this.primaryStage = primaryStage;
 		this.primaryStage.setTitle("frMedias");
+
+		primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+			@Override
+			public void handle(WindowEvent t) {
+				try {
+					BaseDatosConfig.pararTrabajoBackup();
+					Platform.exit();
+				} catch (SchedulerException e) {
+					Alertas.crearAlertaExcepcion("No se ha podido cerrar la aplicación", "Ha habido un fallo al cerrar el trabajo de base de datos", e);
+				}
+			}
+		});
 
 		try {
 			FXMLLoader loader = new FXMLLoader();

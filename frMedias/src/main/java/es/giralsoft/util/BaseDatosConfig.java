@@ -20,6 +20,8 @@ public class BaseDatosConfig {
 	public static String backupExe;
 	public static int backupFrecuency;
 	public static String backupPath;
+	
+	private static Scheduler scheduler;
 
 	public static void cargarConfiguracion(Properties properties) {
 		serverName = properties.getProperty("db.server_name");
@@ -43,10 +45,14 @@ public class BaseDatosConfig {
 	    	trigger.setRepeatCount(SimpleTrigger.REPEAT_INDEFINITELY);
 	    	trigger.setRepeatInterval(backupFrecuency);
 	    	
-	    	Scheduler scheduler = new StdSchedulerFactory().getScheduler();
+	    	scheduler = new StdSchedulerFactory().getScheduler();
 	    	scheduler.start();
 	    	scheduler.scheduleJob(job, trigger);
 		}
+	}
+	
+	public static void pararTrabajoBackup() throws SchedulerException {
+    	scheduler.shutdown();
 	}
 
 }
